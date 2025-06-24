@@ -31,24 +31,33 @@
 // console.log(users[0].username)
 // console.log(users[0].email)
 // console.log(users[0].lessonsCompleted.map(elem => elem*2))
-let users = [
-  {
-    username: "David",
-    email: "david@yourmom.com",
-    password: "test123",
-    subscriptionStatus: "VIP",
-    discordId: "David Bragg#0001",
-    lessonsCompleted: [0, 1],
-  },
-  {
-    username: "Mitri",
-    email: "mitri@yourmom.com",
-    password: "mitri123",
-    subscriptionStatus: "VIP",
-    discordId: "Mitri#0001",
-    lessonsCompleted: [0, 1, 2, 3],
-  },
-];
+
+// let users = [
+//   {
+//     username: "David",
+//     email: "david@yourmom.com",
+//     password: "test123",
+//     subscriptionStatus: "VIP",
+//     discordId: "David Bragg#0001",
+//     lessonsCompleted: [0, 1],
+//   },
+//   {
+//     username: "Mitri",
+//     email: "mitri@yourmom.com",
+//     password: "mitri123",
+//     subscriptionStatus: "VIP",
+//     discordId: "Mitri#0001",
+//     lessonsCompleted: [0, 1, 2, 3],
+//   },
+//   {
+//     username: "Zen",
+//     email: "zen@yourmom.com",
+//     password: "zen123",
+//     subscriptionStatus: "VIP",
+//     discordId: "zen#0001",
+//     lessonsCompleted: [1, 3],
+//   },
+// ];
 
 //To log user in:
 // function login(email, password) {
@@ -101,17 +110,83 @@ let users = [
 
 // console.log(users);
 
-function register(user) {
+// function register(user) {
+//   users.push(user);
+// }
+
+// register({
+//   username: "blake",
+//   email: "blake@yourmom.com",
+//   password: "pass",
+//   subscriptionStatus: "freeSub",
+//   discordId: "blakey",
+//   lessonsCompleted: [0, 1, 4, 3]
+// });
+
+// function register(
+//   name,
+//   email,
+//   password,
+//   subStatus,
+//   discordId,
+//   lessonsCompleted
+// ) {
+//   let user = {
+//     username: name,
+//     email: email,
+//     password: password,
+//     subscriptionStatus: subStatus,
+//     discordId: discordId,
+//     lessonsCompleted: lessonsCompleted
+//   }
+//   console.log(user);
+//   users.push(user);
+// }
+// register(
+//   "Blake",
+//   "blake@email.com",
+//   "passy",
+//   "VVIP",
+//   "TheBlake",
+//   [3,7,2]
+// );
+// console.log(users);
+
+// ARRAY of OBJECTS
+let users = [
+  {
+    username: "David",
+    password: "test123",
+  },
+  {
+    username: "Mitri",
+    password: "mitri123",
+  },
+  {
+    username: "Zen",
+    password: "zen123",
+  },
+];
+console.log(users);
+
+// FUNCTION to ADD OBJECTS to array
+
+
+function register(
+  name, 
+  password
+) {
+  let user = {
+    username: name,
+    password: password,
+  };
   users.push(user);
 }
 
+// CALL (use) function
 register({
-  username: "blake",
-  email: "blake@yourmom.com",
-  password: "pass",
-  subscriptionStatus: "freeSub",
-  discordId: "blakey",
-  lessonsCompleted: [0, 1, 4, 3]
+  username: "Blake", 
+  password: "passy"
 });
 
 console.log(users);
